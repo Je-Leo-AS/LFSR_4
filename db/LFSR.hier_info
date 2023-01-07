@@ -1,0 +1,35 @@
+|LFSR
+qo[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+qo[1] <= flipflop:flip_1.q
+qo[2] <= flipflop:flip_2.q
+qo[3] <= flipflop:flip_3.q
+d <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+clk => flipflop:flip_1.clk
+clk => flipflop:flip_2.clk
+clk => flipflop:flip_3.clk
+rst => flipflop:flip_1.rst
+rst => flipflop:flip_2.rst
+rst => flipflop:flip_3.rst
+
+
+|LFSR|flipflop:flip_1
+clk => q~reg0.CLK
+rst => q~reg0.PRESET
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LFSR|flipflop:flip_2
+clk => q~reg0.CLK
+rst => q~reg0.PRESET
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LFSR|flipflop:flip_3
+clk => q~reg0.CLK
+rst => q~reg0.PRESET
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
